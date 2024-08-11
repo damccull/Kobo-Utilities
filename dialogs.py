@@ -32,7 +32,7 @@ except ImportError as e:
     from PyQt4.QtGui import QSizePolicy
 
 import six
-from six.moves.configparser import SafeConfigParser
+from six.moves.configparser import ConfigParser
 from six import text_type as unicode
 from six.moves.urllib.parse import quote_plus
 
@@ -546,7 +546,7 @@ class ReaderOptionsDialog(SizePersistedDialog):
         return self.lock_margins_checkbox.checkState() == Qt.Checked
 
     def get_device_settings(self):
-        koboConfig = SafeConfigParser(allow_no_value=True)
+        koboConfig = ConfigParser(allow_no_value=True)
         device = self.parent().device_manager.connected_device
         device_path = self.parent().device_manager.connected_device._main_prefix
         debug_print("get_device_settings - device_path=", device_path)

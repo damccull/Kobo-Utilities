@@ -9,3 +9,8 @@ The official distro channel for this plugin is there: <a href="http://www.mobile
 
 
 The source for this plugin is available from the author
+
+---------
+
+Correction: The source was available from the author, but is now found at
+https://github.com/cbhaley/kobo-utilities.

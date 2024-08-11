@@ -37,7 +37,7 @@ except:
     qFileDialog_FileMode_AnyFile = QFileDialog.AnyFile
 
 # For Python 3 migration
-from six.moves.configparser import SafeConfigParser
+from six.moves.configparser import ConfigParser
 from six.moves.configparser import NoOptionError
 
 
@@ -4940,7 +4940,7 @@ class KoboUtilitiesAction(InterfaceAction):
 
     def get_config_file(self):
         config_file_path = self.device.normalize_path(self.device._main_prefix + '.kobo/Kobo/Kobo eReader.conf')
-        koboConfig = SafeConfigParser(allow_no_value=True)
+        koboConfig = ConfigParser(allow_no_value=True)
         koboConfig.optionxform = str
         debug_print("get_config_file - config_file_path=", config_file_path)
         try:
